@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Little Piece of Us ♡</title>
+
+  <style>
+    body {
+      background: #F8F6EE;
+      font-family: Georgia, serif;
+      text-align: center;
+      padding: 20px 12px;
+      color: #465441;
+    }
+
+    .slide {
+      display: none;
+      background: #FFFDF8;
+      padding: 30px 18px;
+      border-radius: 24px;
+      max-width: 430px;
+      margin: 25px auto;
+      box-shadow: 0 5px 18px #D5DED0;
+      border: 2px solid #DCE7DB;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    h1 {
+      color: #78866B;
+    }
+
+    h2, h3 {
+      color: #667D78;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    button {
+      background: #78866B;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 22px;
+      margin: 8px 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #596B53;
+    }
+
+    .blue-button {
+      background: #9BC7DC;
+      color: #344C58;
+    }
+
+    .blue-button:hover {
+      background: #80B5D0;
+    }
+
+    #counter {
+      color: #78866B;
+      font-size: 13px;
+    }
+
+    /* PHOTO GALLERY */
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin: 25px 0;
+    }
+
+    .polaroid {
+      background: white;
+      padding: 9px 9px 15px;
+      width: 125px;
+      box-shadow: 2px 4px 12px #D5DED0;
+      transform: rotate(-3deg);
+    }
+
+    .polaroid:nth-child(even) {
+      transform: rotate(3deg);
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: 125px;
+      object-fit: cover;
+    }
+
+    .polaroid p {
+      font-size: 11px;
+      margin-bottom: 0;
+      color: #667D78;
+    }
+
+    /* SECRET MESSAGE */
+
+    .secret-box {
+      background: #E7F1F5;
+      border-radius: 18px;
+      padding: 18px;
+      margin: 20px 0;
+    }
+
+    #secret {
+      color: #526B76;
+      font-style: italic;
+    }
+
+    /* FRIENDSHIP QUIZ */
+
+    .question {
+      background: #EEF3E9;
+      padding: 15px;
+      margin: 18px 0;
+      border-radius: 16px;
+    }
+
+    .question button {
+      display: block;
+      width: 100%;
+      margin: 8px 0;
+    }
+
+    .quiz-result {
+      color: #78866B;
+      font-weight: bold;
+      margin-top: 18px;
+    }
+
+    /* MUSIC PAGE */
+
+    .music-card {
+      background: #EAF3F7;
+      padding: 16px;
+      margin: 20px auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px #D3E0E5;
+      max-width: 350px;
+    }
+
+    .music-card h3 {
+      color: #647E8B;
+    }
+
+    .music-note {
+      color: #78866B;
+      font-style: italic;
+    }
+
+    .decoration {
+      color: #9BC7DC;
+      font-size: 22px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- SLIDE 1: WELCOME -->
+
+  <div class="slide active">
+
+    <p class="decoration">˚ ༘♡ ⋆｡˚</p>
+
+    <h1>Hoyyy, ikaw! ♡</h1>
+
+    <p>
+      I made something special for you.
+      Its not much Heather, but I hope you will
+      appreciate it :).
+    </p>
+
+    <p>Welcome to our little world. 🌿</p>
+
+    <button onclick="nextSlide()">Open it →</button>
+
+  </div>
+
+
+  <!-- SLIDE 2: PHOTO GALLERY -->
+
+  <div class="slide">
+
+    <h1>Our Little Memories 📸</h1>
+
+    <p>Minsan kahit simple lng ang moment naten, memorable pa ren. A piece of you, and a pieces of
+    me in our lives.</p>
+
+    <div class="gallery">
+
+      <div class="polaroid">
+        <img src="https://i.postimg.cc/x8fYWrG2/IMG20261102141209.jpg" alt="Our memory">
+        <p>Our favorite moment ♡</p>
+      </div>
+
+      <div class="polaroid">
+        <img src="https://i.postimg.cc/fLKQ724N/Messenger-creation-E23EF553-F90E-438F-8383-41F4698C471D.jpg" alt="Our memory">
+        <p>Just us being us!</p>
+      </div>
+
+      <div class="polaroid">
+        <img src="https://i.postimg.cc/g0VCdS28/IMG20260923153322.jpg" alt="Our memory">
+        <p>A day to remember</p>
+      </div>
+
+      <div class="polaroid">
+        <img src="https://i.postimg.cc/W34XKXDG/IMG20260925131656.jpg" alt="Our memory">
+        <p>Forever in my camera roll ♡</p>
+      </div>
+      
+      <div class="polaroid">
+        <img src="https://i.postimg.cc/NGZv6rVW/IMG20260924160347.jpg" alt="Our memory">
+        <p>Etched in our memories</p>
+      </div>
+
+    </div>
+
+    <button class="blue-button" onclick="previousSlide()">← Back</button>
+    <button onclick="nextSlide()">Next →</button>
+
+  </div>
+
+
+  <!-- SLIDE 3: HIDDEN MESSAGE -->
+
+  <div class="slide">
+
+    <h1>A Little Surprise 💌</h1>
+
+    <p>I want you to read this🎀.</p>
+
+    <div class="secret-box">
+
+      <p>♡ A message just for you ♡</p>
+
+      <button class="blue-button" onclick="showMessage()">
+        Open your message
+      </button>
+
+      <p id="secret"></p>
+
+    </div>
+
+    <button class="blue-button" onclick="previousSlide()">← Back</button>
+    <button onclick="nextSlide()">Next →</button>
+
+  </div>
+
+
+  <!-- SLIDE 4: FRIENDSHIP QUIZ -->
+
+  <div class="slide">
+
+    <h1>How Well Do You Know Me? 📝</h1>
+
+    <p>Let's see how much you remember!</p>
+
+    <div class="question">
+
+      <p>1. What's MY favorite color?</p>
+
+      <button onclick="answerQuiz(this, true)">Olive green 🌿</button>
+
+      <button onclick="answerQuiz(this, false)">Pink 🎀</button>
+
+      <button onclick="answerQuiz(this, false)">Purple 💜</button>
+
+    </div>
+
+    <div class="question">
+
+      <p>2. What's HER favorite color?</p>
+
+      <button onclick="answerQuiz(this, false)">Yellow 🌼</button>
+
+      <button onclick="answerQuiz(this, true)">Baby blue 🩵</button>
+
+      <button onclick="answerQuiz(this, false)">Red ❤️</button>
+
+    </div>
+
+    <div class="question">
+
+      <p>3. What's the name of our website?</p>
+
+      <button onclick="answerQuiz(this, false)">Our Memories</button>
+
+      <button onclick="answerQuiz(this, false)">Forever Friends</button>
+
+      <button onclick="answerQuiz(this, true)">A Little Piece of Us ♡</button>
+
+    </div>
+
+    <p id="quizResult" class="quiz-result">
+      Answer all 3 questions!
+    </p>
+
+    <button class="blue-button" onclick="previousSlide()">← Back</button>
+    <button onclick="nextSlide()">Next →</button>
+
+  </div>
+
+
+  <!-- SLIDE 5: MUSIC PAGE -->
+
+  <div class="slide">
+
+    <p class="decoration">˚ ༘♡ ⋆｡˚</p>
+
+    <h1>OUR FAV SONGGS</h1>
+
+    <p>Two songs, one little friendship ♡</p>
+
+    <div class="music-card">
+
+      <h3>♡ Her song</h3>
+
+      <iframe
+        style="border-radius:14px"
+        src="https://open.spotify.com/embed/track/2ZCe5vjgNDAmoWe73C46nc"
+        width="100%"
+        height="152"
+        frameborder="0"
+        allow="encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+    <div class="music-card">
+
+      <h3>♡ My song</h3>
+
+      <iframe
+        style="border-radius:14px"
+        src="https://open.spotify.com/embed/track/5hff5RQeE84pznOt8WEWeO"
+        width="100%"
+        height="152"
+        frameborder="0"
+        allow="encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+    <p class="music-note">A little soundtrack of us ♡</p>
+
+    <button class="blue-button" onclick="previousSlide()">← Back</button>
+
+  </div>
+
+
+  <!-- SLIDE COUNTER -->
+
+  <p id="counter">Slide 1 of 5</p>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    let currentSlide = 0;
+
+    let slides = document.querySelectorAll(".slide");
+
+    function showSlide(number) {
+
+      slides[currentSlide].classList.remove("active");
+
+      currentSlide = number;
+
+      slides[currentSlide].classList.add("active");
+
+      document.getElementById("counter").innerText =
+        "Slide " + (currentSlide + 1) + " of " + slides.length;
+
+      window.scrollTo(0, 0);
+
+    }
+
+    function nextSlide() {
+
+      if (currentSlide < slides.length - 1) {
+        showSlide(currentSlide + 1);
+      }
+
+    }
+
+    function previousSlide() {
+
+      if (currentSlide > 0) {
+        showSlide(currentSlide - 1);
+      }
+
+    }
+
+    function showMessage() {
+
+      document.getElementById("secret").innerText =
+        "You make ordinary days feel special. Never forget that! ♡";
+
+    }
+
+
+    // FRIENDSHIP QUIZ
+
+    let score = 0;
+    let answered = 0;
+
+    function answerQuiz(button, correct) {
+
+      let question = button.parentElement;
+
+      if (question.classList.contains("answered")) {
+        return;
+      }
+
+      question.classList.add("answered");
+
+      let buttons = question.querySelectorAll("button");
+
+      buttons.forEach(function(item) {
+        item.disabled = true;
+        item.style.opacity = "0.6";
+      });
+
+      button.style.opacity = "1";
+
+      if (correct) {
+
+        score++;
+
+        button.innerText += " ✓";
+
+      } else {
+
+        button.innerText += " ✗";
+
+      }
+
+      answered++;
+
+      if (answered === 3) {
+
+        document.getElementById("quizResult").innerText =
+          "You got " + score + " out of 3! ♡";
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
